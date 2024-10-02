@@ -26,7 +26,6 @@ public class Main {
 		} catch (NoSuchMethodException | SecurityException e) {
 
 			System.out.println("ERROR: Something went wrong with the main method.");
-			System.out.println("Talk to Keenan.");
 		} catch (Throwable e) {
 
 			e.printStackTrace();
@@ -58,7 +57,6 @@ public class Main {
 			
 			System.out.println("ERROR: Something went wrong calling the sorting method.");
 			System.out.println("Perhaps you changed the method header by accident?");
-			System.out.println("You might need to talk to Keenan.");
 		}
 		catch (InvocationTargetException e) {
 			if(e.getCause() != null) {
@@ -67,7 +65,6 @@ public class Main {
 			else {
 				System.out.println("ERROR: Something went wrong calling the sorting method.");
 				System.out.println("Perhaps you changed the method header by accident?");
-				System.out.println("You might need to talk to Keenan.");
 			}
 		}
 		
@@ -107,7 +104,7 @@ public class Main {
 	private static void initAllColors() {
 		Scanner in;
 		try {
-			in = new Scanner(new File("/Users/adamdixon/Documents/Homework07/src/input_files/colors.txt"));
+			in = new Scanner(new File("Sorting Algorithms\\src\\input_files\\colors.txt"));
 
 			while(in.hasNextLine()) {
 				String nextColor = in.nextLine().toLowerCase().trim();
